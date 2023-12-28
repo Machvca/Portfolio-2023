@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import resume from "../../../public/images/resume.png";
+
 
 function Header() {
   return (
@@ -15,7 +15,7 @@ function Header() {
           transition={{ duration: 1 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className=" text-adark mb-9  text-4xl sm:text-5xl lg:text-9xl lg:leading-normal font-extrabold">
+          <h1 className=" text-adark mb-9  text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
             Hey there, Im
             <br />
             <TypeAnimation
@@ -32,7 +32,7 @@ function Header() {
               speed={40}
               repeat={0}
             />
-          </h1>
+           </h1>
           <p className="text-slate-200 text-base sm:text-lg mb-6 lg:text-xl ">
             Im a front-end web
             <p>developer based in</p>

@@ -9,9 +9,9 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="font-Noto text-slate-200 bg-[conic-gradient(var(--tw-gradient-stops))] from-yellow-500 via-gray-700 to-cyan-500  flex min-h-screen flex-col">
+    <main className="font-Noto text-slate-200 bg-[conic-gradient(var(--tw-gradient-stops))] bg-gradient-to-tr from-amber-400 to-yellow-900  flex min-h-screen flex-col">
       <Navbar />
-      <div className="container mx-auto mt-24 px-12  py-4">
+      <div className="container mx-auto mt-20 px-12  py-4">
         <Header />
         <AboutSection />
         <ProjectsSection />
