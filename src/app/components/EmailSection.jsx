@@ -1,49 +1,12 @@
-'use client';
-import React, {useState} from "react";
+"use client";
+import React, { useState } from "react";
 import Gitlogo from "../../../public/images/gitlogo.png";
 import LinkLogo from "../../../public/images/linklogo.png";
 import Link from "next/link";
 import Image from "next/image";
 
-
 const EmailSection = () => {
-    const [emailSubmitted, setEmailSubmitted] = useState(false);
-
-const handleSubmit = async (e) => {
-    e.preventDefault();
-const data = {
-  email: e.target.email.value,
-  subject: e.target.subject.value,
-  message: e.target.message.value,
-};
-const JSONdata = JSON.stringify(data);
-const endpoint = '/api/send';
-
-//form the request for sending data to the server
-const options = {
-    //method POST because im sending data
-    method: 'POST',
-    //tell the server to send JSON.
-    header: {
-        'Content-Type': 'application/json',
-    },
-    //body of the request is the JSON data we created above.
-    body: JSONdata,
-}
-
-const response = await fetch(endpoint, options);
-const resData = await response.json();
-
-
-if (response.status === 200) {
-    console.log('Message sent.');
-    setEmailSubmitted(true)
-}
-
-
-
-}
-
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   return (
     <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
@@ -71,7 +34,7 @@ if (response.status === 200) {
         </div>
       </div>
       <div className="">
-        <form className="flex flex-col" onSubmit={handleSubmit}>
+        <form className="flex flex-col">
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -81,7 +44,7 @@ if (response.status === 200) {
               Your Email
             </label>
             <input
-            name="email"
+              name="email"
               type="email"
               id="email"
               required
@@ -98,7 +61,7 @@ if (response.status === 200) {
               Subject
             </label>
             <input
-            name="subject"
+              name="subject"
               type="text"
               id="subject"
               required
@@ -126,9 +89,11 @@ if (response.status === 200) {
           >
             Send Message
           </button>
-          {emailSubmitted && (<p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
-          </p>)}
+          {emailSubmitted && (
+            <p className="text-green-500 text-sm mt-2">
+              Email sent successfully!
+            </p>
+          )}
         </form>
       </div>
     </section>
