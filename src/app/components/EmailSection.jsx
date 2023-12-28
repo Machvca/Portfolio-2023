@@ -1,15 +1,51 @@
 "use client";
-import React, { useState } from "react";
 import Gitlogo from "../../../public/images/gitlogo.png";
 import LinkLogo from "../../../public/images/linklogo.png";
 import Link from "next/link";
 import Image from "next/image";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_r5qwv09",
+        "template_qch4ouy",
+        form.current,
+        "QioI1SFje5LlE6K61"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSubmitted(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
+    <section
+      id="contact"
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+    >
+      {/* <form ref={form} onSubmit={sendEmail}>
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" />
+      </form> */}
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4  -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2 ">Let`s Connect</h5>
@@ -34,7 +70,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div className="">
-        <form className="flex flex-col">
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col">
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -44,7 +80,7 @@ const EmailSection = () => {
               Your Email
             </label>
             <input
-              name="email"
+              name="user_email"
               type="email"
               id="email"
               required
@@ -78,6 +114,7 @@ const EmailSection = () => {
             </label>
             <textarea
               name="message"
+              type="textarea"
               id="message"
               className="bg-slate-600 border border-slate-500 placeholder-indigo-200 text-gray-300 text-sm rounded-lg block w-full p-2.53"
               placeholder="Leave your message here!"
@@ -89,7 +126,7 @@ const EmailSection = () => {
           >
             Send Message
           </button>
-          {emailSubmitted && (
+          {submitted && (
             <p className="text-green-500 text-sm mt-2">
               Email sent successfully!
             </p>

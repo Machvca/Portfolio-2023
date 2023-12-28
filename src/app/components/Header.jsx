@@ -4,10 +4,9 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
-
 function Header() {
   return (
-    <section className="lg:py-16 ">
+    <section id="header" className="lg:py-16 ">
       <div className="grid grid-cols-1 sm:grid-cols-12  ">
         <motion.div
           initial={{ opacity: 0, scale: 2 }}
@@ -32,7 +31,7 @@ function Header() {
               speed={40}
               repeat={0}
             />
-           </h1>
+          </h1>
           <p className="text-slate-200 text-base sm:text-lg mb-6 lg:text-xl ">
             Im a front-end web
             <p>developer based in</p>

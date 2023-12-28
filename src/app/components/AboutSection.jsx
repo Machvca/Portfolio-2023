@@ -55,7 +55,7 @@ function AboutSection() {
     });
   };
   return (
-    <section className="text-white">
+    <section id="about" className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/joe.JPG"
@@ -100,12 +100,13 @@ function AboutSection() {
               Experience{" "}
             </TabButton>
           </div>
-          <div className="mt-8">{TAB_DATA.find((t)=>t.id===tab).content}</div>
+          <div className="mt-8">
+            {TAB_DATA.find((t) => t.id === tab).content}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
 
 export default AboutSection;
