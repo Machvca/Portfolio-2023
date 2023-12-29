@@ -1,6 +1,7 @@
 "use client";
 import Gitlogo from "../../../public/images/gitlogo.png";
 import LinkLogo from "../../../public/images/linklogo.png";
+import InstagramLogo from "../../../public/images/insta.png";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
@@ -37,16 +38,7 @@ const EmailSection = () => {
       id="contact"
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
-      {/* <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form> */}
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4  -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-700 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4  -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2 ">Let`s Connect</h5>
         <p className="text-slate-300 mb-4 max-w-md">
@@ -55,18 +47,30 @@ const EmailSection = () => {
           tempor aliqua reprehenderit cupidatat cillum sit. Sunt ad minim
           deserunt ipsum amet esse elit aliqua nisi dolore laboris.
         </p>
-        <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+        <div className="flex flex-row gap-4">
+          <a target="_blank" href="https://github.com/Machvca">
             <Image src={Gitlogo} width={50} height={50} alt="Github Icon" />
-          </Link>
-          <Link href="linkedin.com">
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/machvca/">
             <Image
               src={LinkLogo}
               width={100}
               height={100}
               alt="Linkedin Icon"
             />
-          </Link>
+          </a>
+          <a
+            target="_blank"
+            href="
+          https://www.instagram.com/machvca/"
+          >
+            <Image
+              src={InstagramLogo}
+              width={55}
+              height={55}
+              alt="Instagram Icon"
+            />
+          </a>
         </div>
       </div>
       <div className="">
@@ -84,8 +88,8 @@ const EmailSection = () => {
               type="email"
               id="email"
               required
-              className="bg-slate-600 border border-slate-500 placeholder-indigo-200 text-gray-300 text-sm rounded-lg block w-full p-2.53"
-              placeholder="jorge@google.com"
+              className="bg-slate-100 border border-slate-500 placeholder-indigo-200 text-adark text-sm rounded-lg block w-full p-2.53"
+              placeholder="@gmail.com"
             />
           </div>
 
@@ -122,14 +126,12 @@ const EmailSection = () => {
           </div>
           <button
             type="submit"
-            className="bg-purple-500  hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+            className="bg-yellow-500  hover:bg-yellow-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
           >
             Send Message
           </button>
           {submitted && (
-            <p className="text-green-500 text-sm mt-2">
-              Email sent successfully!
-            </p>
+            <p className="text-adark text-sm mt-2">Email sent successfully!</p>
           )}
         </form>
       </div>

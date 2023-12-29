@@ -38,12 +38,13 @@ function Header() {
             <p> Barcelona, Spain.</p>
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-white hover:bg-slate-200 text-black">
+            {/* <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-white hover:bg-slate-200 text-black">
               Hire me
-            </button>
+              px-6 py-3 w-full sm:w-fit rounded-full bg-transparent hover:bg-slate-800 text-white border border-white mt-3
+            </button> */}
 
             <a href="/images/resume.png" download="resume.png">
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full bg-transparent hover:bg-slate-800 text-white border border-white mt-3">
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-100 hover:bg-slate-200 text-adark">
                 Download CV
               </button>
             </a>

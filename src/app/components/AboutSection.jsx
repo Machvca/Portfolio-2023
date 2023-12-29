@@ -2,7 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import { CarouselCustomNavigation } from "./Carousel";
+// import { CarouselTransition } from "./Carousel";
 
 const TAB_DATA = [
   {
@@ -57,11 +57,14 @@ function AboutSection() {
   return (
     <section id="about" className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        {/* <CarouselTransition /> */}
+        
         <Image
           src="/images/joe.JPG"
           alt="joe pendejo"
-          width={500}
-          height={500}
+          width={700}
+          height={700}
+
         />
         <div className="mt-4 md:mt-0  text-left flex flex-col h-full">
           <h2 className="text-4xl  font-bold  text-white mb-6 ">About Me</h2>
@@ -86,7 +89,7 @@ function AboutSection() {
 
             <TabButton
               selectTab={() => handleTabChange("education")}
-              active={tab === "Education"}
+              active={tab === "education"}
             >
               {" "}
               Education{" "}
@@ -100,7 +103,7 @@ function AboutSection() {
               Experience{" "}
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className="mt-4">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
