@@ -2,7 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-// import { CarouselTransition } from "./Carousel";
+
 
 const TAB_DATA = [
   {
@@ -66,6 +66,7 @@ function AboutSection() {
           height={700}
 
         />
+
         <div className="mt-4 md:mt-0  text-left flex flex-col h-full">
           <h2 className="text-4xl  font-bold  text-white mb-6 ">About Me</h2>
           <p className="text-base lg:text-lg ">
