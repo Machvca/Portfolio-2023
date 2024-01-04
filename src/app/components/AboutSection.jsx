@@ -2,6 +2,8 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import Carousel from "./Carousel";
+
 
 
 const TAB_DATA = [
@@ -59,13 +61,14 @@ function AboutSection() {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         {/* <CarouselTransition /> */}
         
-        <Image
+        {/* <Image
           src="/images/joe.JPG"
           alt="joe pendejo"
           width={700}
           height={700}
 
-        />
+        /> */}
+        <Carousel />
 
         <div className="mt-4 md:mt-0  text-left flex flex-col h-full">
           <h2 className="text-4xl  font-bold  text-white mb-6 ">About Me</h2>

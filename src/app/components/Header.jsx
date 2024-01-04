@@ -53,11 +53,11 @@ function Header() {
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
           <div className=" rounded-full  w-[250px] h-[250px] lg:w-[800px] lg:h-[800px]  relative">
             <Image
-              src="/images/calavera2.png"
+              src="/images/headerme.png"
               alt="me image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={800}
-              height={800}
+              width={700}
+              height={700}
             />
           </div>
         </div>
