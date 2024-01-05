@@ -4,9 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-
-
+import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
 
 import { images } from "../../../lib/images";
 
@@ -14,6 +12,7 @@ import { images } from "../../../lib/images";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import "swiper/css/thumbs";
 
 export default function Page() {
@@ -23,22 +22,19 @@ export default function Page() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <section className="min-h-screen py-12">
+    <section className="min-h-screen py-24">
       <div className="container">
         <Swiper
           loop={true}
-          spaceBetween={50} 
-          
-          // navigation={true}
+          spaceBetween={50}
           thumbs={{
             swiper:
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
           }}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="h-96 w-full rounded-lg"
+          modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+          autoplay={{ delay: 4000 }}
+          className="w-full rounded-lg swiper-slide"
         >
-
-        
           {images.map((image, index) => (
             <SwiperSlide key={index}>
               <div className="flex h-full w-full items-center justify-center">
@@ -54,14 +50,14 @@ export default function Page() {
 
         {/* Thumbnail */}
         <Swiper
+          modules={[FreeMode, Navigation, Thumbs]}
           onSwiper={setThumbsSwiper}
           loop={true}
           spaceBetween={10}
           slidesPerView={3}
           freeMode={true}
           watchSlidesProgress={true}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="thumbs mt-3 h-32 w-full rounded-lg"
+          className="thumbs mt-2 h-32 w-full rounded-lg"
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>

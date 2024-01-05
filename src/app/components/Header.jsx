@@ -32,15 +32,15 @@ function Header() {
               repeat={0}
             />
           </h1>
-          <p className="text-slate-200 text-base sm:text-lg mb-6 lg:text-xl text-transparent absolute">
-            I&apos;m a front-end web
+          <p className="text-slate-100 hover:text-adark text-base sm:text-lg mb-6 lg:text-xl">
+            Im a front-end web
             <p>developer based in</p>
             <p> Barcelona, Spain.</p>
           </p>
           <div>
             
             <a href="/images/resume.png" download="jorgemachucaCV.png">
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-100 hover:bg-slate-200 text-adark">
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-100 hover:bg-adark hover:text-white text-adark">
                 Download CV
               </button>
             </a>

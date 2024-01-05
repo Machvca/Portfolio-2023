@@ -6,7 +6,6 @@ import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 
-
 export default function Home() {
   return (
     <main className="font-Noto text-slate-200 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400  flex min-h-screen flex-col">
@@ -21,5 +20,3 @@ export default function Home() {
     </main>
   );
 }
-
-
