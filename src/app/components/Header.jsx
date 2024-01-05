@@ -7,7 +7,7 @@ import meImage from "../../../public/images/headerme.png";
 
 function Header() {
   return (
-    <section id="header" className="lg:py-16 ">
+    <section id="header" className="lg:py-16 mb-48">
       <div className="grid grid-cols-1 sm:grid-cols-12  ">
         <motion.div
           initial={{ opacity: 0, scale: 2 }}
@@ -32,12 +32,13 @@ function Header() {
               repeat={0}
             />
           </h1>
-          <p className="text-slate-200 text-base sm:text-lg mb-6 lg:text-xl ">
-            Im a front-end web
+          <p className="text-slate-200 text-base sm:text-lg mb-6 lg:text-xl text-transparent absolute">
+            I&apos;m a front-end web
             <p>developer based in</p>
             <p> Barcelona, Spain.</p>
           </p>
           <div>
+            
             <a href="/images/resume.png" download="jorgemachucaCV.png">
               <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-100 hover:bg-slate-200 text-adark">
                 Download CV
@@ -51,11 +52,12 @@ function Header() {
           transition={{ duration: 0.5 }}
           className="col-span-3 place-self-center mt-4 lg:mt-0 "
         >
-          <div className="rounded-full bg-yellow-900 w-[250px] h-[250px] lg:w-[650px] lg:h-[650px] relative">
+
+          <div className="rounded-full bg-gray-200 w-[200px] h-[200px] lg:w-[650px] lg:h-[650px] relative ">
             <Image
               src={meImage}
               alt="picture of myself"
-              className="absolute  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
               objectPosition="100px 50px"
               quality={100}
               width={600}
@@ -69,4 +71,4 @@ function Header() {
 }
 
 export default Header;
-// npm i -D prettier-plugin-tailwindcss
+

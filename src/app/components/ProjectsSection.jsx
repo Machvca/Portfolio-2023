@@ -67,7 +67,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl text-white mt-4 mb-9 font-bold">
+      <h2 className="text-center text-4xl text-white  mb-9 font-bold">
         My Projects
       </h2>
       {/* <div>{projectsData.map((project)=> <ProjectCard key={project.id} title={project.title} description={project.description} imgUrl={project.image} />)}</div> */}

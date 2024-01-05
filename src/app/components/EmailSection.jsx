@@ -40,14 +40,14 @@ const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-700 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4  -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2 ">Lets Connect</h5>
-        <p className="text-slate-100 mb-4 max-w-md">
+        <h5 className="text-2xl mb-8 font-bold text-adark my-2 ">Lets Connect</h5>
+        <p className="text-adark mb-4 max-w-md">
           Feel free to reach out through my social media profiles or drop me an
           email. Lets build connections that go beyond the digital realm,
           bridging our shared interests and creating meaningful interactions.
           Looking forward to connecting with you!
         </p>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 mt-6">
           <a target="_blank" href="https://github.com/Machvca">
             <Image src={Gitlogo} width={50} height={50} alt="Github Icon" />
           </a>
@@ -126,7 +126,7 @@ const EmailSection = () => {
           </div>
           <button
             type="submit"
-            className="bg-yellow-600  hover:bg-yellow-700 text-white font-medium py-2.5 px-5 rounded-lg w-full border-adark "
+            className="bg-gray-500  hover:bg-gray-700 text-white font-medium py-2.5 px-5 rounded-lg w-full border-adark "
           >
             Send Message
           </button>

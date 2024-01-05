@@ -4,8 +4,6 @@ import Image from "next/image";
 import TabButton from "./TabButton";
 import Carousel from "./Carousel";
 
-
-
 const TAB_DATA = [
   {
     title: "skills",
@@ -57,37 +55,29 @@ function AboutSection() {
     });
   };
   return (
-    <section id="about" className="text-white">
+    <section id="about" className="text-white mt-12">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        {/* <CarouselTransition /> */}
-
-        {/* <Image
-          src="/images/joe.JPG"
-          alt="joe pendejo"
-          width={700}
-          height={700}
-
-        /> */}
         <Carousel />
 
         <div className="mt-4 md:mt-0  text-left flex flex-col h-full">
           <h2 className="text-4xl  font-bold  text-white mb-6 ">About Me</h2>
-          <p className="text-base lg:text-lg ">
+          <p className="text-base lg:text-lg  text-white">
             Less than two years ago, I embarked on an exciting journey into the
-            world of web development, discovering a true passion. I find immense joy in creating digital
-            landscapes and bringing ideas to life through code. When Im not
-            immersed in the world of programming, youll likely find me
-            strumming away on my guitar, channeling creativity through music.
-            Ive also cultivated a love for nurturing green life, as I take
-            pride in caring for my collection of plants. Theres something
-            incredibly rewarding about watching them flourish under my care.
-            Beyond that, I have a keen eye for the art of photography. Capturing
-            moments and freezing them in time has become another outlet for my
-            creative expression. Whether its behind the lens or behind the
-            screen coding, I find fulfillment in the balance between the digital
-            and the tangible, the structured and the artistic.
+            world of web development, discovering a true passion. I find immense
+            joy in creating digital landscapes and bringing ideas to life
+            through code. When Im not immersed in the world of programming,
+            youll likely find me strumming away on my guitar, channeling
+            creativity through music. Ive also cultivated a love for nurturing
+            green life, as I take pride in caring for my collection of plants.
+            Theres something incredibly rewarding about watching them flourish
+            under my care. Beyond that, I have a keen eye for the art of
+            photography. Capturing moments and freezing them in time has become
+            another outlet for my creative expression. Whether its behind the
+            lens or behind the screen coding, I find fulfillment in the balance
+            between the digital and the tangible, the structured and the
+            artistic.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start mt-8 ">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
