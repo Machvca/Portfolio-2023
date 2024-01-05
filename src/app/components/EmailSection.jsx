@@ -43,7 +43,7 @@ const EmailSection = () => {
         <h5 className="text-xl font-bold text-white my-2 ">Lets Connect</h5>
         <p className="text-slate-100 mb-4 max-w-md">
           Feel free to reach out through my social media profiles or drop me an
-          email. Let's build connections that go beyond the digital realm,
+          email. Lets build connections that go beyond the digital realm,
           bridging our shared interests and creating meaningful interactions.
           Looking forward to connecting with you!
         </p>

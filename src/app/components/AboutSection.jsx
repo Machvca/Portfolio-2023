@@ -75,15 +75,15 @@ function AboutSection() {
           <p className="text-base lg:text-lg ">
             Less than two years ago, I embarked on an exciting journey into the
             world of web development, discovering a true passion. I find immense joy in creating digital
-            landscapes and bringing ideas to life through code. When I'm not
-            immersed in the world of programming, you'll likely find me
+            landscapes and bringing ideas to life through code. When Im not
+            immersed in the world of programming, youll likely find me
             strumming away on my guitar, channeling creativity through music.
-            I've also cultivated a love for nurturing green life, as I take
-            pride in caring for my collection of plants. There's something
+            Ive also cultivated a love for nurturing green life, as I take
+            pride in caring for my collection of plants. Theres something
             incredibly rewarding about watching them flourish under my care.
             Beyond that, I have a keen eye for the art of photography. Capturing
             moments and freezing them in time has become another outlet for my
-            creative expression. Whether it's behind the lens or behind the
+            creative expression. Whether its behind the lens or behind the
             screen coding, I find fulfillment in the balance between the digital
             and the tangible, the structured and the artistic.
           </p>
