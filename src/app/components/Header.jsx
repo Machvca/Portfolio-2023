@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import meImage from "../../../public/images/headerme.png";
 
 function Header() {
   return (
@@ -19,9 +20,8 @@ function Header() {
             <br />
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
                 "Jorge Machuca",
-                2000, // wait 1s before replacing "Mice" with "Hamsters"
+                2000,
                 "a Web Developer",
                 3000,
                 "a Creative Developer",
@@ -38,29 +38,31 @@ function Header() {
             <p> Barcelona, Spain.</p>
           </p>
           <div>
-            {/* <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-white hover:bg-slate-200 text-black">
-              Hire me
-              px-6 py-3 w-full sm:w-fit rounded-full bg-transparent hover:bg-slate-800 text-white border border-white mt-3
-            </button> */}
-
-            <a href="/images/resume.png" download="resume.png">
+            <a href="/images/resume.png" download="jorgemachucaCV.png">
               <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-100 hover:bg-slate-200 text-adark">
                 Download CV
               </button>
             </a>
           </div>
         </motion.div>
-        <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <div className=" rounded-full  w-[250px] h-[250px] lg:w-[800px] lg:h-[800px]  relative">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-3 place-self-center mt-4 lg:mt-0 "
+        >
+          <div className="rounded-full bg-yellow-900 w-[250px] h-[250px] lg:w-[650px] lg:h-[650px] relative">
             <Image
-              src="/images/headerme.png"
-              alt="me image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={700}
-              height={700}
+              src={meImage}
+              alt="picture of myself"
+              className="absolute  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+              objectPosition="100px 50px"
+              quality={100}
+              width={600}
+              height={600}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

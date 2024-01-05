@@ -41,11 +41,11 @@ const EmailSection = () => {
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-700 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4  -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2 ">Lets Connect</h5>
-        <p className="text-slate-300 mb-4 max-w-md">
-          Enim qui enim consectetur sunt aliquip aliquip labore elit tempor
-          velit et adipisicing nostrud. Nisi esse sint fugiat consectetur non
-          tempor aliqua reprehenderit cupidatat cillum sit. Sunt ad minim
-          deserunt ipsum amet esse elit aliqua nisi dolore laboris.
+        <p className="text-slate-100 mb-4 max-w-md">
+          Feel free to reach out through my social media profiles or drop me an
+          email. Let's build connections that go beyond the digital realm,
+          bridging our shared interests and creating meaningful interactions.
+          Looking forward to connecting with you!
         </p>
         <div className="flex flex-row gap-4">
           <a target="_blank" href="https://github.com/Machvca">
@@ -88,7 +88,7 @@ const EmailSection = () => {
               type="email"
               id="email"
               required
-              className="bg-slate-100 border border-slate-500 placeholder-indigo-200 text-adark text-sm rounded-lg block w-full p-2.53"
+              className="bg-slate-100 border border-adark placeholder-slate-400 text-adark text-sm rounded-lg block w-full p-2.53"
               placeholder="@gmail.com"
             />
           </div>
@@ -105,7 +105,7 @@ const EmailSection = () => {
               type="text"
               id="subject"
               required
-              className="bg-slate-600 border mb-2 border-slate-500 placeholder-indigo-200 text-gray-300 text-sm rounded-lg block w-full p-2.53"
+              className=" border mb-2 border-adark bg-slate-100 text-adark text-sm rounded-lg block w-full p-2.53"
               placeholder=""
             />
           </div>
@@ -120,13 +120,13 @@ const EmailSection = () => {
               name="message"
               type="textarea"
               id="message"
-              className="bg-slate-600 border border-slate-500 placeholder-indigo-200 text-gray-300 text-sm rounded-lg block w-full p-2.53"
+              className="bg-slate-100 border border-adark placeholder-slate-400 text-adark  text-sm rounded-lg block w-full p-2.53"
               placeholder="Leave your message here!"
             />
           </div>
           <button
             type="submit"
-            className="bg-yellow-500  hover:bg-yellow-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+            className="bg-yellow-600  hover:bg-yellow-700 text-white font-medium py-2.5 px-5 rounded-lg w-full border-adark "
           >
             Send Message
           </button>

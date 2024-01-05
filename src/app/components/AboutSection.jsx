@@ -60,7 +60,7 @@ function AboutSection() {
     <section id="about" className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         {/* <CarouselTransition /> */}
-        
+
         {/* <Image
           src="/images/joe.JPG"
           alt="joe pendejo"
@@ -73,14 +73,19 @@ function AboutSection() {
         <div className="mt-4 md:mt-0  text-left flex flex-col h-full">
           <h2 className="text-4xl  font-bold  text-white mb-6 ">About Me</h2>
           <p className="text-base lg:text-lg ">
-            Id eu incididunt veniam duis ad pariatur culpa anim. Pariatur Lorem
-            magna veniam laboris dolore voluptate aliqua excepteur. Culpa tempor
-            laborum nostrud laboris occaecat Lorem sunt. Et consectetur nulla
-            aliqua sit ut deserunt dolore duis dolor culpa cillum. Culpa esse
-            mollit adipisicing nostrud non laboris excepteur amet exercitation
-            deserunt commodo laborum voluptate id. Lorem ex fugiat cillum irure
-            exercitation sunt dolor sint magna Lorem labore consequat laborum
-            consequat.
+            Less than two years ago, I embarked on an exciting journey into the
+            world of web development, discovering a true passion. I find immense joy in creating digital
+            landscapes and bringing ideas to life through code. When I'm not
+            immersed in the world of programming, you'll likely find me
+            strumming away on my guitar, channeling creativity through music.
+            I've also cultivated a love for nurturing green life, as I take
+            pride in caring for my collection of plants. There's something
+            incredibly rewarding about watching them flourish under my care.
+            Beyond that, I have a keen eye for the art of photography. Capturing
+            moments and freezing them in time has become another outlet for my
+            creative expression. Whether it's behind the lens or behind the
+            screen coding, I find fulfillment in the balance between the digital
+            and the tangible, the structured and the artistic.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
