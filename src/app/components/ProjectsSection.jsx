@@ -66,7 +66,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
+    <section id="projects" className=" xl:py-0">
       <h2 className="text-center text-4xl text-white  mb-9 font-bold">
         My Projects
       </h2>

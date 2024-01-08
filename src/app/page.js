@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
@@ -8,9 +8,9 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="font-Noto text-slate-200 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400  flex min-h-screen flex-col">
+    <main className="font-Noto text-slate-200 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400  flex min-h-screen  flex-col">
       <Navbar />
-      <div className="container mx-auto mt-12 px-12  py-4">
+      <div className="container mx-auto mt-12 px-12 py-4">
         <Header />
         <AboutSection />
         <ProjectsSection />

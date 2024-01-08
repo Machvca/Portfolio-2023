@@ -38,9 +38,8 @@ function Header() {
             <p> Barcelona, Spain.</p>
           </p>
           <div>
-            
             <a href="/images/resume.png" download="jorgemachucaCV.png">
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-100 hover:bg-adark hover:text-white text-adark">
+              <button className="px-6 py-3 w-fit mb-10 sm:w-fit rounded-full mr-4 bg-slate-100 hover:bg-adark hover:text-white text-adark">
                 Download CV
               </button>
             </a>
@@ -52,7 +51,6 @@ function Header() {
           transition={{ duration: 0.5 }}
           className="col-span-3 place-self-center mt-4 lg:mt-0 "
         >
-
           <div className="rounded-full bg-gray-200 w-[200px] h-[200px] lg:w-[650px] lg:h-[650px] relative ">
             <Image
               src={meImage}
@@ -71,4 +69,3 @@ function Header() {
 }
 
 export default Header;
-

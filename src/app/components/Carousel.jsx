@@ -22,7 +22,7 @@ export default function Page() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <section className="min-h-screen py-24">
+    <section className="">
       <div className="container">
         <Swiper
           loop={true}
