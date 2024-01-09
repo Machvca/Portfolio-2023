@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XmarkIcon } from "@heroicons/react/24/solid";
 import OverlayMenu from "./OverlayMenu";
@@ -23,15 +23,29 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [scroll, setScroll] = useState(0);
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    ``;
+    setScroll(scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="fixed top-0 left-0  right-0 z-10  bg-opacity-100">
+    <nav
+      className={`fixed top-0 left-0  right-0 z-10  bg-opacity-25 ${
+        scroll && "bg-slate-100"
+      } `}
+    >
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link
-          href={"/#header"}
-          className=" md:text-5xl text-white"
-        >
+        <Link href={"/#header"} className=" md:text-5xl text-white">
           <span className="text-sm ">Jorge Machuca</span>
-          
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

@@ -7,12 +7,10 @@ const variants = {
 };
 
 const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active
-    ? "text-adark "
-    : "text-slate-300";
+  const buttonClasses = active ? "text-adark " : "text-slate-500";
   return (
     <button onClick={selectTab}>
-      <p className={`mr-4 font-semibold text-3xl  ${buttonClasses}`}>
+      <p className={`mr-4 font-semibold text-lg lg:text-3xl  ${buttonClasses}`}>
         {children}
       </p>
       <motion.div

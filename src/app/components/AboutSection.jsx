@@ -57,8 +57,9 @@ function AboutSection() {
   return (
     <section id="about" className="text-white mt-8">
       <div className="md:grid md:grid-cols-2 gap-24 items-center xl:py-0 py-8 px-4 xl:gap-16 sm:py-16 xl:px-8 ">
-
-        <Carousel />
+        <div className="hidden lg:block">
+          <Carousel />
+        </div>
         <div className="mt-4 md:mt-0 xl:mt-12  text-left flex flex-col h-full">
           <h2 className="text-4xl  font-bold  text-white mb-6 ">About Me</h2>
           <p className="text-base lg:text-lg  text-white">
@@ -77,6 +78,9 @@ function AboutSection() {
             between the digital and the tangible, the structured and the
             artistic.
           </p>
+          <div className="block lg:hidden pt-8">
+            <Carousel />
+          </div>
           <div className="flex flex-row justify-start mt-8 ">
             <TabButton
               selectTab={() => handleTabChange("skills")}

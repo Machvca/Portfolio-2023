@@ -32,7 +32,7 @@ function Header() {
               repeat={0}
             />
           </h1>
-          <p className="text-slate-100 hover:text-adark text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-white hover:text-adark text-base sm:text-lg mb-6 lg:text-xl">
             Im a front-end web
             <p>developer based in</p>
             <p> Barcelona, Spain.</p>
